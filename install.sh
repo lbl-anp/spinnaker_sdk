@@ -93,7 +93,7 @@ sudo dpkg -i spinupdate-*.deb
 sudo dpkg -i spinnaker-*.deb
 
 # Taken from configure_spinnaker.sh
-lemurs_echo "Adding user ${user} to group ${grpname}."
+echo "Adding user ${user} to group ${grpname}."
 sudo groupadd -f $grpname
 sudo usermod -a -G $grpname $user
 echo "UDEV rules must be installed separately ..."
