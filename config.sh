@@ -12,9 +12,10 @@ sudo sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ { /usbcore.usbfs_memory_mb=1000/! s|"$
 sudo sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ { /noresume/! s|"$| noresume"|g }' /etc/default/grub
 sudo update-grub
 
+# NOTE this doesn't work when building in docker. The above grub command should complete this step on every (future) boot.
 # Increase the max USB image size to 1000MB in USB module
 # https://importgeek.wordpress.com/2017/02/26/increase-usbfs-memory-limit-in-ubuntu/
 # https://support.pixelink.com/support/solutions/articles/3000054087-image-transfer-fails-to-start-when-image-size-is-bigger-than-2-mb
-sudo sh -c "echo 1000 > /sys/module/usbcore/parameters/usbfs_memory_mb"
+# sudo sh -c "echo 1000 > /sys/module/usbcore/parameters/usbfs_memory_mb"
 
 # TODO Add UDEV rules?
