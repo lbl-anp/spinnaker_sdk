@@ -18,7 +18,7 @@ fi
 # Increase the max USB image size to 1000MB in USB module
 # https://importgeek.wordpress.com/2017/02/26/increase-usbfs-memory-limit-in-ubuntu/
 # https://support.pixelink.com/support/solutions/articles/3000054087-image-transfer-fails-to-start-when-image-size-is-bigger-than-2-mb
-if [[ -d /sys/module/usbcore/parameters ]]; then
+if [[ -w /sys/module/usbcore/parameters ]]; then
     sudo sh -c "echo 1000 > /sys/module/usbcore/parameters/usbfs_memory_mb"
 fi
 
