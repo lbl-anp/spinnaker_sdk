@@ -12,7 +12,7 @@ set -o pipefail
 mydir="$(dirname "$(realpath -s $0)")"
 arch="$(dpkg --print-architecture)"  #amd64, etc
 ubuntu_release="$(lsb_release -cs)"  # bionic, etc
-version="1.27.0.48"
+version="2.2.0.48"
 user=$(whoami)
 grpname="flirimaging"
 
