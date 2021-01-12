@@ -1,0 +1,15 @@
+Name: libspinnaker/accepted-flir-eula
+Template: libspinnaker/accepted-flir-eula
+Value: true
+Owners: libspinnaker
+Flags: seen
+
+Name: libspinnaker/error-flir-eula
+Template: libspinnaker/error-flir-eula
+Owners: libspinnaker
+
+Name: libspinnaker/present-flir-eula
+Template: libspinnaker/present-flir-eula
+Value:
+Owners: libspinnaker
+Flags: seen
